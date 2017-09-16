@@ -85,3 +85,7 @@ a:hover
   height: 35em;
   background: linear-gradient( 90deg, #303030	, #484848);
 }
+/*Added from menu.css*/
+.centered {
+  text-align: center;
+}
