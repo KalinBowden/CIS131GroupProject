@@ -1,17 +1,12 @@
 function changeLink1()
 {
-  var text = document.getElementById("link1").style.background = "linear-gradient( 180deg, #303030	, #1a75ff)";
-  var bord = document.getElementById("link1").style.borderWidth = "medium";
-  var push = document.getElementById("link1").style.paddingTop = "27%";
+  var text = document.getElementById("link1").style.background = "linear-gradient( 0deg, #303030	, #888888)";
 }
 
 function changeLink1Back()
 {
   var text = document.getElementById("link1").style.background = "none";
-  var bord = document.getElementById("link1").style.borderWidth = "0";
-  var push = document.getElementById("link1").style.paddingTop = "30%";
 }
-
 function changeLink2()
 {
   var text = document.getElementById("link2").style.background = "linear-gradient( 0deg, #303030	, #888888)";
