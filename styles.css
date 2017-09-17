@@ -69,6 +69,11 @@ h1
   color: red;
 }
 
+.titleAccentSecondary
+{
+  color: antiquewhite;
+}
+
 a:link
 {
   color: antiquewhite;
