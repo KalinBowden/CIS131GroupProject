@@ -32,6 +32,14 @@ p
   border-width: 0;
 }
 
+/* Share CSS */
+
+.head-text
+{
+  font-family: 'Lobster', cursive;
+  font-size: 2.5em;
+}
+
 /* CSS Nav Elements */
 
 header
@@ -112,11 +120,6 @@ a:hover
 }
 
 /*=================================================================*/
-
-h3 {
-	font-family: Lucida console;
- }
- .
 .custom1 {
 	background-color: transparent !important;
 }
@@ -137,17 +140,14 @@ h3 {
 	/* color: rgba(5,41,65,1.00); */
 	color: #b58900;
 	font-size: 1.3em !important;
-	font-family: Lucida console;
 }
 .custom5 {
 	/* color: rgba(150,6,100,1.00); */
 	color: #b54400;
 	font-size: 1em !important;
-	font-family: Lucida console;
 }
 .custom6 {
 	font-size: 1em;
-	font-family: Lucida console;
 	color: silver;
 	/*border: solid .1em silver;*/
 	background-color: rgba(49,71,98,.3) !important;
@@ -157,14 +157,11 @@ h3 {
 	/* color: rgba(150,6,100,1.00); */
     color: #b58900;
 }
-.custom6: {
-	
-	
-}
+
 .custom7 {
 	margin-top: 1.5em;
-	font-family: Lucida console;
-	color: #b54400;
+  color: #b54400;
+  font-size: 4em;
  }
  
  .custom8 {
