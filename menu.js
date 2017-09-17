@@ -6,7 +6,7 @@ var pic = ['pic.png'];
 //var menuCount = 1; //global count variable for PopulateMenu
 var itemCount = 1; //global count variable for PopulateMenuItems
 
-function PopulateMenu(){
+function PopulateMenu(){ //not currently working
     var leMenu;
     do { //populates menu items
       leMenu = ( //adds menu elements into variable
