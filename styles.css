@@ -91,10 +91,18 @@ a:hover
 
 .landing
 {
-  height: 60em;
+  height: 45em;
   background-image: url(images/2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.landLog
+{
+  background: linear-gradient( 90deg, #303030	, #484848);
+  padding: 1.3em;
+  border-radius: 15px;
+  margin-top: 35%;
 }
 
 .col-md-2
