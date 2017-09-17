@@ -42,5 +42,6 @@ function logIn()
 {
   var email = document.getElementById("email0").value;
   var password = document.getElementById("password0").value;
+  var lble = document.getElementById("lblEmail").innerHTML = email;
   alert(email + " " + password);
 }
