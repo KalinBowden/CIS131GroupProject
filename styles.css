@@ -56,7 +56,10 @@ h1
   font-size: 2em;
 }
 
-
+#log1
+{
+  display: none;
+}
 
 #link1 , #link2, #link3, #link4
 {

@@ -1,3 +1,5 @@
+
+
 function changeLink(pic)
 {
   if (pic === 0)
@@ -40,8 +42,28 @@ function changeBack(pic)
 
 function logIn()
 {
+  // Set variables for login
   var email = document.getElementById("email0").value;
   var password = document.getElementById("password0").value;
-  
-  alert('Welcome Back User @' + email);
+
+  if (email === "" || password === "")
+  {
+    alert("please enter your email and password!");
+  }
+  else
+  {
+    // Give the user a friendly welcome.
+    alert('Welcome Back User @' + email);
+    var log0 = document.getElementById("log0").style.display = "none";
+    var log1 = document.getElementById("log1").style.display = "block";
+  }
+
+  function logOut()
+  {
+    var log0 = document.getElementById("log0").style.display = "block";
+    var log1 = document.getElementById("log1").style.display = "none";
+    alert("Please log in to continue...");
+    email.value = "";
+    password.value = "";
+  }
 }
