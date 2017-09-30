@@ -40,6 +40,14 @@ p
   font-size: 2.5em;
 }
 
+.headLogIn
+{
+  font-size: 1em;
+  padding-bottom: .2em;
+  padding-top: .2em;
+  margin-top: .65em;
+}
+
 /* CSS Nav Elements */
 
 header
