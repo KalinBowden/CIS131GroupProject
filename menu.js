@@ -22,7 +22,7 @@ function PopulateMenu(){ //not currently working
       PopulateMenuItems();
       menuCount++;
   } while (menuCount <= 3);
-} //will need to start work on this soon
+} //editing the comment again for testing
 
 function PopulateMenuItems(){
     var leMenu;
