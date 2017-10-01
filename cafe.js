@@ -34,6 +34,7 @@ var allPasswords = ["password", "CodePride1", "y"];
 var userAvatar = ["images/avatar0.jpg", "images/avatar1.jpg", "images/avatar2.jpg"];
 var burgerImgs = ["images/burger0.jpg", "images/burger1.jpg", "images/burger2.jpg", "images/burger3.jpg"];
 var burgerName = ["burger0","burger1","burger2","burger3"];
+var count = 0;
 
 // When the page loads do these things
 function onLoadMain()
@@ -46,8 +47,6 @@ function onLoadMain()
   loginBtn.addEventListener("click", attemptLogin, false);
   loginBtn1.addEventListener("click", submitLogin, false);
   loginBar.style.display = "none";
-
-  burgerImageSwap();
 }
 
 /*
@@ -221,10 +220,26 @@ function burgerImageSwap()
   var burgerPics = document.getElementById("burgerPics");
   
   //
-  for (var index = 0; index < 4; index++)
+  if (count === 0)
   {
-    burgerPics.innerHTML += '<div class="col-md-6"><img src="images/burger0.jpg" alt="burger0" height="160" width="160" class="burgerThumbHome bord"></div>'
+    for (var index = 0; index < 4; index++)
+    {
+      burgerPics.innerHTML += '<div class="col-md-6"><img src="images/burger' + count + '.jpg" alt="burger0" height="160" width="160" class="burgerThumbHome bord"></div>'
+    }
   }
+  else if (count === 7)
+  {
+    for (var index = 0; index < 4; index++)
+    {
+      burgerPics.innerHTML += '<div class="col-md-6"><img src="images/burger0.jpg" alt="burger0" height="160" width="160" class="burgerThumbHome bord"></div>'
+    }
+    count = 0;
+  }
+
+  alert(count);
+
+  //
+  count++;
 }
 
 /* End Home Page Functionality */
@@ -232,4 +247,5 @@ function burgerImageSwap()
 
 
 // Event List
+window.setInterval(burgerImageSwap, 3000);
 window.addEventListener("load", onLoadMain, false);
