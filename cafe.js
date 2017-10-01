@@ -41,10 +41,13 @@ function onLoadMain()
   var loginBar = document.getElementById("headerLogInBar");
   var loginBtn = document.getElementById("headLogIn");
   var loginBtn1 = document.getElementById("logIn");
+  
 
   loginBtn.addEventListener("click", attemptLogin, false);
   loginBtn1.addEventListener("click", submitLogin, false);
   loginBar.style.display = "none";
+
+  burgerImageSwap();
 }
 
 /*
@@ -179,6 +182,7 @@ function changeBack(pic)
 
 /* Home Page Functionality */
 
+
 function logIn()
 {
   // Set variables for login
@@ -197,6 +201,8 @@ function logIn()
     var log1 = document.getElementById("log1").style.display = "block";
   }
 
+  
+  // TODO
   function logOut()
   {
     var log0 = document.getElementById("log0").style.display = "block";
@@ -204,6 +210,20 @@ function logIn()
     alert("Please log in to continue...");
     email.value = "";
     password.value = "";
+  }
+}
+
+
+// TODO
+function burgerImageSwap()
+{
+  //
+  var burgerPics = document.getElementById("burgerPics");
+  
+  //
+  for (var index = 0; index < 4; index++)
+  {
+    burgerPics.innerHTML += '<div class="col-md-6"><img src="images/burger0.jpg" alt="burger0" height="160" width="160" class="burgerThumbHome bord"></div>'
   }
 }
 
