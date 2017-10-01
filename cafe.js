@@ -1,4 +1,139 @@
+/*
+============================================
+  Title: Code Monkey Cafe Java Script File
+  ----------------------------------------
+  Date: 
+  ----------------------------------------
+  Contributors - All
+    Dev: 
+    Dev:
+    Dev:
+    Dev: Kalin Bowden - Home Page & Header
 
+============================================
+  Notes
+  ----------------------------------------
+  Prolog: all notes at this level should clarify
+    and instruct the reader on how they should 
+    interperet the following structure of this 
+    Java Script file.
+  ----------------------------------------
+  Note 0: Author - Kalin Bowden
+    All further Notes should follow this, the 
+    example provided in note 0. Where the Note
+    number and note author are listed in 
+    identical fashion. 
+============================================
+*/
+
+
+// Class level Variabels
+var currentUser = "";
+var allUsers = ["admin@admin","KalinBowden@gmail.com", ""];
+var allPasswords = ["password", "CodePride1", "y"];
+var userAvatar = ["images/avatar0.jpg", "images/avatar1.jpg", "images/avatar2.jpg"];
+
+// When the page loads do these things
+function onLoadMain()
+{
+  var loginBar = document.getElementById("headerLogInBar");
+  var loginBtn = document.getElementById("headLogIn");
+  var loginBtn1 = document.getElementById("logIn");
+
+  loginBtn.addEventListener("click", attemptLogin, false);
+  loginBtn1.addEventListener("click", submitLogin, false);
+  loginBar.style.display = "none";
+}
+
+/*
+  JavaScript Functionality for the Header of CodeMonkeyCafe
+*/
+
+
+// TODO
+function submitLogin()
+{
+  // Function level variables
+  var count = 0;
+  var isUser = false;
+  var isPass = false;
+
+  // Grab elements
+  var userName = document.getElementById("email0").value;
+  var passWord = document.getElementById("password0").value;
+
+  // Test for correct Login Email
+  do
+  {
+    if (userName === allUsers[count++])
+    {
+      isUser = true;
+      count = 0;
+    }
+  } while(!isUser && count < allUsers.length);
+
+  // Test for correct Login Email
+  do
+  {
+    if (passWord === allPasswords[count++])
+    {
+      isPass = true;
+    }
+
+  } while(!isPass && count < allPasswords.length);
+
+  // If either fails alert the user
+  if(!isUser || !isPass)
+  {
+    onLoginFail();
+  }
+
+  // If both account and password match
+  if (isUser && isPass)
+  {
+    onLoginSuccess();
+  }
+}
+
+
+// TODO
+function attemptLogin()
+{
+  var loginBar = document.getElementById("headerLogInBar");
+  loginBar.style.display = "";
+}
+
+
+// TODO
+function getUserInfo()
+{
+  var userName = "";
+  var passWord = "";
+}
+
+
+// TODO
+function onLoginSuccess()
+{
+  var loginBar = document.getElementById("headerLogInBar");
+  loginBar.style.display = "none";
+
+  //
+  var loginSec = document.getElementById("loginSec");
+
+  loginSec.innerHTML = '<img src="' + userAvatar[0] + '" alt="an Avatar" height="40" width="40" >' + 
+  '<button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">Sign Out</button>';
+}
+
+
+function onLoginFail()
+{
+  alert("That account does not exist or the password was incorrect.")
+}
+
+/* End Header Section*/
+
+/* Home Page Functionality */
 
 function changeLink(pic)
 {
@@ -67,3 +202,5 @@ function logIn()
     password.value = "";
   }
 }
+
+window.addEventListener("load", onLoadMain, false);

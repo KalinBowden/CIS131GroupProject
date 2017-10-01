@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Code Monkey Cafe</title>
+    <title>Code Monkey Cafe-Home</title>
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
@@ -26,31 +26,42 @@
 
   <body>
     <!-- The fluid contitner for the index page -->
-    <div class="container-fluid">
+    <div class="container-fluid" id="page">
 
       <!--
       ==========================================================================
-        The headr is also tthe nav bar that will be shared by all pages.
+        The header is also tthe nav bar that will be shared by all pages.
         It is dived into the Title, the Nav system, and the Socail media links.
+        You will be able to log in and create a profile.
+        Therer will be test data.
       -->
-      <header>
+      <header id="CMHeader">
         <nav>
+          <!-- This row contains all rows within the header and nav elements -->
           <div class="row">
 
             <!--
              ==================================
              This column will contain the title
             -->
+            <!--Column 0 - Site Title: CodeMonkeyCafe -->
             <div class="col-md-3">
               <h1 class="text-center">
                 <span class="titleAccent">C</span>ode<span class="titleAccent">M</span>onkey<span class="titleAccent">C</span>afe
               </h1>
             </div>
 
-
+            
+            <!-- Coloumn 1 - Page Links: Home, Menu, About, Events -->
             <div class="col-md-5 text-center">
+
+              <!-- This row contains the links to the other pages -->
               <div class="row">
+
+                <!-- An empty coloum for style -->
                 <div class="col-md-2 text-center"></div>
+
+                <!-- The home link Column -->
                 <div class="col-md-2 text-center">
                   <a href="index.html">
                     <p id="link1" onmouseover="changeLink(0)" onmouseout="changeBack(0)">
@@ -58,7 +69,8 @@
                     </p>
                   </a>
                 </div>
-                <!-- This element will contain the  link -->
+
+                <!-- The Menu link column -->
                 <div class="col-md-2 text-center">
                   <a href="menu.html">
                     <p id="link2" onmouseover="changeLink(1)" onmouseout="changeBack(1)">
@@ -66,7 +78,8 @@
                     </p>
                   </a>
                 </div>
-                <!-- This element will contain the  link -->
+
+                <!-- The About link column -->
                 <div class="col-md-2 text-center">
                   <a href="#">
                     <p id="link3" onmouseover="changeLink(2)" onmouseout="changeBack(2)">
@@ -74,7 +87,8 @@
                     </p>
                   </a>
                 </div>
-                <!-- This element will contain the  link -->
+
+                <!-- The events Link Column -->
                 <div class="col-md-2 text-center">
                   <a href="events.html">
                     <p id="link4" onmouseover="changeLink(3)" onmouseout="changeBack(3)">
@@ -82,17 +96,76 @@
                     </p>
                   </a>
                 </div>
+
+                <!-- Empty column added for style -->
                 <div class="col-md-2 text-center"></div>
-            </div>
-          </div>
+              </div><!-- End row 1 -->
+            </div><!-- End column 1 -->
 
+            <!-- This coloumn is being repurpsoed for loging in and out -->
+            <div class="col-md-1 text-center">
 
-            <!-- This column will contain the links to social media -->
-            <div class="col-md-4 text-center">FaceBook Twitter
             </div>
-          </div>
+
+            <!-- This coloumn is being repurpsoed for loging in and out -->
+            <div class="col-md-3 text-center" id="loginSec">
+                <span class="glyphicon glyphicon-user avatarHead" aria-hidden="true"></span>
+                <button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">
+                  Sign In
+                </button>
+            </div>
+
+          </div><!-- End Row 0 -->
         </nav>
+
+        <!--  -->
+        <div>
+
+          <!--  -->
+          <div class="row" id="headerLogInBar">
+
+            <!--  -->
+            <div class="col-md-2"></div>
+
+            <!--  -->
+            <div class="col-md-8">
+
+              <!--  -->
+                <form class="form-inline">
+
+                  <!--  -->
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="email0" placeholder="Email">
+                  </div>
+
+                  <!--  -->
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="password0" placeholder="Password">
+                  </div>
+
+                  <!--  -->
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                  </div>
+
+                  <!--  -->
+                  <button type="button" class="btn btn-default" id="logIn">Log In</button>
+                </form>
+
+            </div>
+
+            <!--  -->
+            <div class="col-md-2"></div>
+          </div>
+        </div>
       </header>
+
+<!-- ============================== End Header: Start Landing ========================================== -->
+
 
       <div class="landing">
 
