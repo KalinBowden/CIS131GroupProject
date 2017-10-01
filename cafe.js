@@ -29,7 +29,7 @@
 
 // Class level Variabels
 var currentUser = "";
-var allUsers = ["admin","KalinBowden@gmail.com", "x"];
+var allUsers = ["admin@admin","KalinBowden@gmail.com", ""];
 var allPasswords = ["password", "CodePride1", "y"];
 
 //
@@ -40,8 +40,12 @@ var loginBtn = document.getElementById("headLogIn");
 // TODO
 function onLoadMain()
 {
-  var page = document.getElementById("page").style.position = "absolute";
-  var header = document.getElementById("CMHeader").style.position = "sticky";
+  var loginBar = document.getElementById("headerLogInBar");
+  var loginBtn = document.getElementById("headLogIn");
+  var loginBtn1 = document.getElementById("logIn");
+
+  loginBtn.addEventListener("click", attemptLogin, false);
+  loginBtn1.addEventListener("click", submitLogin, false);
   loginBar.style.display = "none";
 }
 
@@ -49,10 +53,43 @@ function onLoadMain()
   JavaScript Functionality for the Header of CodeMonkeyCafe
 */
 
+function submitLogin()
+{
+  var count = 0;
+  var isUser = false;
+  var isPass = false;
+  var userName = document.getElementById("email0").value;
+  var passWord = document.getElementById("password0").value;
+
+  // Test for correct Login Email
+  do
+  {
+    if (userName === allUsers[count++])
+    {
+      isUser = true;
+      count = 0;
+    }
+
+  } while(!isUser && count < allUsers.length);
+
+  // Test for correct Login Email
+  do
+  {
+    if (passWord === allPasswords[count++])
+    {
+      isPass = true;
+    }
+
+  } while(!isPass && count < allPasswords.length);
+
+  //
+  onLoginSuccess();
+}
+
 function attemptLogin()
 {
+  var loginBar = document.getElementById("headerLogInBar");
   loginBar.style.display = "";
-  alert("it worked");
 }
 
 function getUserInfo()
@@ -68,7 +105,8 @@ function createUserInfoPromp()
 
 function onLoginSuccess()
 {
-
+  var loginBar = document.getElementById("headerLogInBar");
+  loginBar.style.display = "none";
 }
 
 
@@ -150,4 +188,3 @@ function logIn()
 }
 
 window.addEventListener("load", onLoadMain, false);
-loginBtn.addEventListener("click", attemptLogin(), false);
