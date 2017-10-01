@@ -6,14 +6,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Code Monkey Cafe - Events</title>
-    
+
         <!-- Google Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-    
+
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet">
-    
+
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -33,66 +33,134 @@
         The headr is also tthe nav bar that will be shared by all pages.
         It is dived into the Title, the Nav system, and the Socail media links.
       -->
-      <header>
-          <nav>
-            <div class="row">
-  
-              <!--
-               ==================================
-               This column will contain the title
-              -->
-              <div class="col-md-3">
-                <h1 class="text-center">
-                  <span class="titleAccent">C</span>ode<span class="titleAccent">M</span>onkey<span class="titleAccent">C</span>afe
-                </h1>
-              </div>
-  
-  
-              <div class="col-md-5 text-center">
-                <div class="row">
-                  <div class="col-md-2 text-center"></div>
-                  <div class="col-md-2 text-center">
-                    <a href="index.html">
-                      <p id="link1" onmouseover="changeLink(0)" onmouseout="changeBack(0)">
-                        Home
-                      </p>
-                    </a>
-                  </div>
-                  <!-- This element will contain the  link -->
-                  <div class="col-md-2 text-center">
-                    <a href="menu.html">
-                      <p id="link2" onmouseover="changeLink(1)" onmouseout="changeBack(1)">
-                        Menu
-                      </p>
-                    </a>
-                  </div>
-                  <!-- This element will contain the  link -->
-                  <div class="col-md-2 text-center">
-                    <a href="#">
-                      <p id="link3" onmouseover="changeLink(2)" onmouseout="changeBack(2)">
-                        About
-                      </p>
-                    </a>
-                  </div>
-                  <!-- This element will contain the  link -->
-                  <div class="col-md-2 text-center">
-                    <a href="events.html">
-                      <p id="link4" onmouseover="changeLink(3)" onmouseout="changeBack(3)">
-                        Events
-                      </p>
-                    </a>
-                  </div>
-                  <div class="col-md-2 text-center"></div>
-              </div>
+      <header id="CMHeader">
+        <nav>
+          <!-- This row contains all rows within the header and nav elements -->
+          <div class="row">
+
+            <!--
+             ==================================
+             This column will contain the title
+            -->
+            <!--Column 0 - Site Title: CodeMonkeyCafe -->
+            <div class="col-md-3">
+              <h1 class="text-center">
+                <span class="titleAccent">C</span>ode<span class="titleAccent">M</span>onkey<span class="titleAccent">C</span>afe
+              </h1>
             </div>
-  
-  
-              <!-- This column will contain the links to social media -->
-              <div class="col-md-4 text-center">FaceBook Twitter
-              </div>
+
+
+            <!-- Coloumn 1 - Page Links: Home, Menu, About, Events -->
+            <div class="col-md-5 text-center">
+
+              <!-- This row contains the links to the other pages -->
+              <div class="row">
+
+                <!-- An empty coloum for style -->
+                <div class="col-md-2 text-center"></div>
+
+                <!-- The home link Column -->
+                <div class="col-md-2 text-center">
+                  <a href="index.html">
+                    <p id="link1" onmouseover="changeLink(0)" onmouseout="changeBack(0)">
+                      Home
+                    </p>
+                  </a>
+                </div>
+
+                <!-- The Menu link column -->
+                <div class="col-md-2 text-center">
+                  <a href="menu.html">
+                    <p id="link2" onmouseover="changeLink(1)" onmouseout="changeBack(1)">
+                      Menu
+                    </p>
+                  </a>
+                </div>
+
+                <!-- The About link column -->
+                <div class="col-md-2 text-center">
+                  <a href="#">
+                    <p id="link3" onmouseover="changeLink(2)" onmouseout="changeBack(2)">
+                      About
+                    </p>
+                  </a>
+                </div>
+
+                <!-- The events Link Column -->
+                <div class="col-md-2 text-center">
+                  <a href="events.html">
+                    <p id="link4" onmouseover="changeLink(3)" onmouseout="changeBack(3)">
+                      Events
+                    </p>
+                  </a>
+                </div>
+
+                <!-- Empty column added for style -->
+                <div class="col-md-2 text-center"></div>
+              </div><!-- End row 1 -->
+            </div><!-- End column 1 -->
+
+            <!-- This coloumn is being repurpsoed for loging in and out -->
+            <div class="col-md-1 text-center">
+
             </div>
-          </nav>
-        </header>
+
+            <!-- This coloumn is being repurpsoed for loging in and out -->
+            <div class="col-md-3 text-center" id="loginSec">
+                <span class="glyphicon glyphicon-user avatarHead" aria-hidden="true"></span>
+                <button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">
+                  Sign In
+                </button>
+            </div>
+
+          </div><!-- End Row 0 -->
+        </nav>
+
+        <!--  -->
+        <div>
+
+          <!--  -->
+          <div class="row" id="headerLogInBar">
+
+            <!--  -->
+            <div class="col-md-2"></div>
+
+            <!--  -->
+            <div class="col-md-8">
+
+              <!--  -->
+                <form class="form-inline">
+
+                  <!--  -->
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="email" class="form-control" id="email0" placeholder="Email">
+                  </div>
+
+                  <!--  -->
+                  <div class="form-group">
+                    <label class="sr-only" for="exampleInputPassword3">Password</label>
+                    <input type="password" class="form-control" id="password0" placeholder="Password">
+                  </div>
+
+                  <!--  -->
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> Remember me
+                    </label>
+                  </div>
+
+                  <!--  -->
+                  <button type="button" class="btn btn-default" id="logIn">Log In</button>
+                </form>
+
+            </div>
+
+            <!--  -->
+            <div class="col-md-2"></div>
+          </div>
+        </div>
+      </header>
 
 	  <h2 class="text-center custom7  head-text">Coming Events</h2>
       <div class="jumbotron custom3">
@@ -112,7 +180,7 @@
 	   </div>
 	  </div>
     </div> <!-- /container -->
-	
+
     <div class="container-fluid">
       <div class="jumbotron custom3">
        	<img class="img-circle custom8" src="images/stain1.png" width="120" height="120" alt="Guatemala">
@@ -128,10 +196,10 @@
 			<button type="button" class="btn btn-default custom6">MAYBE</button>
 			<!-- <button type="button" class="btn btn-default custom6">INTEREST</button> -->
 	   </div>
-         
+
 	  </div>
     </div> <!-- /container -->
-	
+
     <div class="container-fluid">
       <div class="jumbotron custom3">
        	<img class="img-circle custom8" src="images/stain1.png" width="120" height="120" alt="Guatemala">
@@ -149,7 +217,7 @@
 	   </div>
 	  </div>
     </div> <!-- /container -->
-	
+
     <div class="container-fluid">
       <div class="jumbotron custom3">
        	<img class="img-circle custom8" src="images/stain1.png" width="120" height="120" alt="Guatemala">
@@ -170,7 +238,7 @@
         <!-- </p> -->
 	  </div>
     </div> <!-- /container -->
-	
+
     <div class="container-fluid">
       <div class="jumbotron custom3">
        	<img class="img-circle custom8" src="images/stain1.png" width="120" height="120" alt="Guatemala">
@@ -187,7 +255,7 @@
 	   </div>
 	  </div>
     </div> <!-- /container -->
-	
+
     <div class="container-fluid">
       <div class="jumbotron custom3">
        	<img class="img-circle custom8" src="images/stain1.png" width="120" height="120" alt="Guatemala">
