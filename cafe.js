@@ -131,9 +131,6 @@ function onLoginFail()
   alert("That account does not exist or the password was incorrect.")
 }
 
-/* End Header Section*/
-
-/* Home Page Functionality */
 
 function changeLink(pic)
 {
@@ -175,6 +172,10 @@ function changeBack(pic)
   }
 }
 
+/* End Header Section*/
+
+/* Home Page Functionality */
+
 function logIn()
 {
   // Set variables for login
@@ -203,4 +204,9 @@ function logIn()
   }
 }
 
+/* End Home Page Functionality */
+
+
+
+// Event List
 window.addEventListener("load", onLoadMain, false);
