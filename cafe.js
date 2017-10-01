@@ -33,12 +33,7 @@ var allUsers = ["admin@admin","KalinBowden@gmail.com", ""];
 var allPasswords = ["password", "CodePride1", "y"];
 var userAvatar = ["images/avatar0.jpg", "images/avatar1.jpg", "images/avatar2.jpg"];
 
-//
-var loginBar = document.getElementById("headerLogInBar");
-var loginBtn = document.getElementById("headLogIn");
-
-
-// TODO
+// When the page loads do these things
 function onLoadMain()
 {
   var loginBar = document.getElementById("headerLogInBar");
@@ -54,11 +49,16 @@ function onLoadMain()
   JavaScript Functionality for the Header of CodeMonkeyCafe
 */
 
+
+// TODO
 function submitLogin()
 {
+  // Function level variables
   var count = 0;
   var isUser = false;
   var isPass = false;
+
+  // Grab elements
   var userName = document.getElementById("email0").value;
   var passWord = document.getElementById("password0").value;
 
@@ -70,9 +70,7 @@ function submitLogin()
       isUser = true;
       count = 0;
     }
-
   } while(!isUser && count < allUsers.length);
-
 
   // Test for correct Login Email
   do
@@ -84,32 +82,37 @@ function submitLogin()
 
   } while(!isPass && count < allPasswords.length);
 
+  // If either fails alert the user
   if(!isUser || !isPass)
   {
     onLoginFail();
   }
 
-  //
-  onLoginSuccess();
+  // If both account and password match
+  if (isUser && isPass)
+  {
+    onLoginSuccess();
+  }
 }
 
+
+// TODO
 function attemptLogin()
 {
   var loginBar = document.getElementById("headerLogInBar");
   loginBar.style.display = "";
 }
 
+
+// TODO
 function getUserInfo()
 {
   var userName = "";
   var passWord = "";
 }
 
-function createUserInfoPromp()
-{
 
-}
-
+// TODO
 function onLoginSuccess()
 {
   var loginBar = document.getElementById("headerLogInBar");
@@ -120,18 +123,17 @@ function onLoginSuccess()
 
   loginSec.innerHTML = '<img src="' + userAvatar[0] + '" alt="an Avatar" height="40" width="40" >' + 
   '<button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">Sign Out</button>';
-
 }
 
 
 function onLoginFail()
 {
-  Alert("That account does not exist or the password was incorrect.")
+  alert("That account does not exist or the password was incorrect.")
 }
 
 /* End Header Section*/
 
-
+/* Home Page Functionality */
 
 function changeLink(pic)
 {
