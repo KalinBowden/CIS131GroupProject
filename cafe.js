@@ -1,3 +1,53 @@
+/*
+============================================
+  Title: Code Monkey Cafe Java Script File
+  ----------------------------------------
+  Date: 
+  ----------------------------------------
+  Contributors - All
+    Dev: 
+    Dev:
+    Dev:
+    Dev: Kalin Bowden - Home Page & Header
+
+============================================
+  Notes
+  ----------------------------------------
+  Prolog: all notes at this level should clarify
+    and instruct the reader on how they should 
+    interperet the following structure of this 
+    Java Script file.
+  ----------------------------------------
+  Note 0: Author - Kalin Bowden
+    All further Notes should follow this, the 
+    example provided in note 0. Where the Note
+    number and note author are listed in 
+    identical fashion. 
+============================================
+*/
+
+
+// Class level Variabels
+var currentUser = "";
+var allUsers = ["admin","KalinBowden@gmail.com", "x"];
+var allPasswords = ["password", "CodePride1", "y"];
+
+/*
+  Java Script Functionality for the Header of CodeMonkeyCafe
+*/
+
+function getUserInfo()
+{
+
+}
+
+function createUserInfoPromp()
+{
+  
+}
+
+/* End Header Section*/
+
 
 
 function changeLink(pic)
