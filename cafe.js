@@ -31,6 +31,7 @@
 var currentUser = "";
 var allUsers = ["admin@admin","KalinBowden@gmail.com", ""];
 var allPasswords = ["password", "CodePride1", "y"];
+var userAvatar = ["images/avatar0.jpg", "images/avatar1.jpg", "images/avatar2.jpg"];
 
 //
 var loginBar = document.getElementById("headerLogInBar");
@@ -72,6 +73,7 @@ function submitLogin()
 
   } while(!isUser && count < allUsers.length);
 
+
   // Test for correct Login Email
   do
   {
@@ -81,6 +83,11 @@ function submitLogin()
     }
 
   } while(!isPass && count < allPasswords.length);
+
+  if(!isUser || !isPass)
+  {
+    onLoginFail();
+  }
 
   //
   onLoginSuccess();
@@ -107,12 +114,19 @@ function onLoginSuccess()
 {
   var loginBar = document.getElementById("headerLogInBar");
   loginBar.style.display = "none";
+
+  //
+  var loginSec = document.getElementById("loginSec");
+
+  loginSec.innerHTML = '<img src="' + userAvatar[0] + '" alt="an Avatar" height="40" width="40" >' + 
+  '<button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">Sign Out</button>';
+
 }
 
 
 function onLoginFail()
 {
-
+  Alert("That account does not exist or the password was incorrect.")
 }
 
 /* End Header Section*/
