@@ -57,4 +57,4 @@ function StartScripts(){
     PopulateMenuItems();
 }
 
-window.addEventListener("load", StartScripts, false)
+window.addEventListener("load", StartScripts, false);
