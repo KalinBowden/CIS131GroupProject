@@ -44,6 +44,16 @@ body
   padding: 0;
 }
 
+.burgerThumbHome
+{
+  margin: .4em;
+}
+
+.bord
+{
+  border: .2em solid antiquewhite;
+}
+
 p
 {
   border-bottom-style: solid;
@@ -143,7 +153,6 @@ a:hover
 
 .landingBox0
 {
-  height: 35em;
   background: transparent;
 }
 

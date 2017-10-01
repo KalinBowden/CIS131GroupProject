@@ -32,6 +32,8 @@ var currentUser = "";
 var allUsers = ["admin@admin","KalinBowden@gmail.com", ""];
 var allPasswords = ["password", "CodePride1", "y"];
 var userAvatar = ["images/avatar0.jpg", "images/avatar1.jpg", "images/avatar2.jpg"];
+var burgerImgs = ["images/burger0.jpg", "images/burger1.jpg", "images/burger2.jpg", "images/burger3.jpg"];
+var burgerName = ["burger0","burger1","burger2","burger3"];
 
 // When the page loads do these things
 function onLoadMain()
@@ -125,13 +127,13 @@ function onLoginSuccess()
   '<button type="button" class="btn btn-default" aria-label="Left Align" id="headLogIn">Sign Out</button>';
 }
 
-
+// TODO
 function onLoginFail()
 {
   alert("That account does not exist or the password was incorrect.")
 }
 
-
+// TODO
 function changeLink(pic)
 {
   if (pic === 0)
@@ -152,6 +154,7 @@ function changeLink(pic)
   }
 }
 
+// TODO
 function changeBack(pic)
 {
   if (pic === 0)
