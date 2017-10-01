@@ -32,18 +32,49 @@ var currentUser = "";
 var allUsers = ["admin","KalinBowden@gmail.com", "x"];
 var allPasswords = ["password", "CodePride1", "y"];
 
+//
+var loginBar = document.getElementById("headerLogInBar");
+var loginBtn = document.getElementById("headLogIn");
+
+
+// TODO
+function onLoadMain()
+{
+  var page = document.getElementById("page").style.position = "absolute";
+  var header = document.getElementById("CMHeader").style.position = "sticky";
+  loginBar.style.display = "none";
+}
+
 /*
-  Java Script Functionality for the Header of CodeMonkeyCafe
+  JavaScript Functionality for the Header of CodeMonkeyCafe
 */
+
+function attemptLogin()
+{
+  loginBar.style.display = "";
+  alert("it worked");
+}
 
 function getUserInfo()
 {
-
+  var userName = "";
+  var passWord = "";
 }
 
 function createUserInfoPromp()
 {
-  
+
+}
+
+function onLoginSuccess()
+{
+
+}
+
+
+function onLoginFail()
+{
+
 }
 
 /* End Header Section*/
@@ -117,3 +148,6 @@ function logIn()
     password.value = "";
   }
 }
+
+window.addEventListener("load", onLoadMain, false);
+loginBtn.addEventListener("click", attemptLogin(), false);

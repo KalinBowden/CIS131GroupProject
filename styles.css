@@ -21,6 +21,16 @@ body
   font-family: Lucida console;
 }
 
+.CMHeader
+{
+  position: sticky;
+}
+
+#headerLogInBar
+{
+  padding: .2em;
+}
+
 .container-fluid
 {
   padding: 0;
